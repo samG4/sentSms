@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="16dp"
+  android:background="#FFFFFF">
+
+  <TextView
+    android:id="@+id/tvName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Name"/>
+
+  <TextView
+    android:id="@+id/tvNumber"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/tvName"
+    app:layout_constraintTop_toBottomOf="@+id/tvName"
+    tools:text="8717999653"/>
+
+  <EditText
+    android:id="@+id/etMessage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="10dp"
+    android:inputType="text|textMultiLine"
+    android:text="Enter your message"
+    app:layout_constraintEnd_toStartOf="@+id/imgSend"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvNumber"/>
+
+  <ImageView
+    android:id="@+id/imgSend"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_send"
+    app:layout_constraintBottom_toBottomOf="@+id/etMessage"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/etMessage"/>
+
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:src="@drawable/ic_close"
+    app:layout_constraintBottom_toBottomOf="@+id/tvName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/etMessage"
+    app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>
